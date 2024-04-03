@@ -17,6 +17,7 @@ from __future__ import annotations
 import pprint
 import re  # noqa: F401
 import json
+from fattureincloud_python_sdk.models.vat_item import VatItem
 
 from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union

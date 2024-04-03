@@ -81,9 +81,11 @@ class CreateVatTypeResponse(BaseModel):
         if obj is None:
             return None
 
+
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
+        obj["data"]["ei_type"] = str(obj["data"]["ei_type"])
         _obj = cls.model_validate(
             {
                 "data": (
